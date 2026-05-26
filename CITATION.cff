@@ -1,0 +1,15 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Gavi Vaccine Pricing and Procurement
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Zooey
+    family-names: Meznarich
+    email: zmeznarich@hmc.edu
+    orcid: 'https://orcid.org/0009-0004-1311-934X'
+    affiliation: Harvey Mudd College

@@ -1,0 +1,13 @@
+"""Note: Must change email before running code!"""
+
+MODEL_FILE = "model/hex.mod"
+COMMANDS_FILE = "model/commands.txt"
+
+NEOS_HOST = "neos-server.org"
+NEOS_PORT = 3333
+
+NEOS_EMAIL = "example@example.org"
+
+SLURM_SSH_LOGIN = "sshuser@sshhost"
+SLURM_ACCOUNT = "slurmaccount"
+SLURM_EMAIL = "example@example.org"
