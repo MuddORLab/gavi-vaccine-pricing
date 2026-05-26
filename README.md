@@ -29,23 +29,10 @@ Code for the paper "Strategies for the Global Alliance for Vaccines and Immuniza
 * **model** directory
   * `commands_gurobi.txt`: list of commands to use in AMPL execution
   * `hex.mod`: new/updated primary AMPL file
-  * **deprecated** directory (old files currently unused, not all listed)
-      * `hex_nostart.mod`: model with no warm start
-      * `noHex.mod`: model without Hexavalent
-      * `noOPV.mod`: model without OPV antigen/vaccine
-      * `polio_antigen.mod`: model with IPV/OPV as combined Polio antigen
-      * `exclude_HepB_bivalent.mod`: AMPL model file (excluding HepB and bivalent vaccines)
-      * `pent_as_hex.mod`: old experiment with Pentavalent as Hexavalent
-      * `gavi.mod`: old AMPL model file
-      * `hex.dat`: individual data file (not really necessary with dat file generation)
-    
-* **experiments** directory
-    * contains generated dat files
+  
 
 
-* `Detailed Demand Forecast_crosstab.xlsx`: spreadsheet of demand projection data
 * `config.py.example`: example configuration
-* `mi4a_public_database.xlsx`: spreadsheet containing historical data from [WHO](https://www.who.int/teams/immunization-vaccines-and-biologicals/vaccine-access/mi4a/mi4a-vaccine-purchase-data), used to calculate parameters in `params.py`
 * `parse_results.py`: code to collect experiment results
 * `requirements.txt`: requirements to run the model
 * `run_manual_dat.py`: code for running an individual dat file manually (without automatic generation)
