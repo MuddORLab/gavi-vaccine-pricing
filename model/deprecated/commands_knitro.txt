@@ -1,0 +1,10 @@
+option solver knitro;
+
+option knitro_options "ms_maxtime_cpu=-1 mip_opt_gap_rel=1e-2 outlev=3 convex=0";
+
+solve;
+display price;
+display quant;
+display x;
+display y;
+display z;

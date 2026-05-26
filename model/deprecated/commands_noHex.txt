@@ -1,0 +1,11 @@
+option solver gurobi;
+
+option gurobi_options 'ams_epsabs 1e-0 outlev 1 nonconvex 2 mipgap 1e-2 timelim 345600';
+
+solve;
+
+display price;
+display quant;
+
+display x;
+display z;

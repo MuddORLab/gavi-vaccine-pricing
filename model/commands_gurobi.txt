@@ -1,0 +1,17 @@
+option solver gurobi;
+
+option gurobi_options 'ams_epsabs 1e-0 outlev 1 nonconvex 2 mipgap 5e-2 timelim 54000 mipfocus 3 intfocus 1 intfeastol 1e-9 iisfind=1 resultfile infeas.ilp';
+
+solve;
+
+display price, quant, x, y, z ;
+
+
+display {i in MFRS}, {t in HORIZON}, {v in VACCINES, i in MFRS, t in HORIZON} price[v,i,t], {v in VACCINES, i in MFRS, t in HORIZON} quant[v,i,t] > results.csv;
+display {i in MFRS} y[i] > results.csv;
+display z > results.csv;
+
+
+# 2026 only
+display {i in MFRS, v in VACCINES} price[v, i, 3];
+display{i in MFRS, v in VACCINES} quant[v, i,3];

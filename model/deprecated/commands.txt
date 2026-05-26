@@ -1,0 +1,10 @@
+option solver baron;
+
+option baron_options 'maxtime=-1 epsa=1e-0 outlev=1 lpsolver=cplex';
+
+solve;
+display price;
+display quant;
+display x;
+display y;
+display z;

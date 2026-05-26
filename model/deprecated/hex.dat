@@ -1,0 +1,59 @@
+# hex.dat
+data;
+
+set VACCINES := DTP HepB Hib IPV Pent Hex OPV DTP-IPV DTP-HepB;
+set ANTIGENS := DTP HepB Hib IPV OPV;
+
+param M := 5;   # number of mfrs
+param T := 7;   # tender length
+
+param mu1 := 10^-7;
+param mu2 := 10^-5;
+param mu3 := 1 - (mu1 + mu2);
+
+param gamma := 0.25;
+
+# demand parameters – need python script? uses gamma
+param a := ;
+param b := ;
+param c := ;
+
+param d := 0;       # 0, 3.3, 11.72, 15.98
+
+param profit :=     # in millions
+        1   65      # LG Chem Ltd
+        2   85      # Serum Institute
+        3   30      # Panacea Biotec Limited
+        4   83      # BE VACCINES PTE LTD
+        5   59      # Sanofi
+
+param capacity :=       # python script
+param hexCost := 1000   # 1 billions, in millions
+param hexCapacity :=    # python script
+
+param demand :  1           2           3           4           5           6           7 :=     
+        DTP     196577949   200295609   203776515   207197014   210249261   213249984   216196634
+        HepB    220726573   224846562   228913068   232857313   236405680   239868796   243251377
+        Hib     190504523   194244332   197777238   201155884   204226794   207232195   210188594
+        IPV     108846348   113066549   115525867   117911386   120180762   122415286   124566235
+        OPV     282610093   288136362   293457879   0           0           0           0
+
+param composition :     DTP     HepB    Hib     IPV     Pent    Hex     OPV     DTP-IPV     DTP-HepB :=   # composition matrix
+            DTP         1       0       0       0       1       1       0       1           1
+            HepB        0       1       0       0       1       1       0       0           1
+            Hib         0       0       1       0       1       1       0       0           0
+            IPV         0       0       0       1       0       1       0       1           0
+            OPV         0       0       0       0       0       0       1       0           0 ;
+
+param num :=
+    DTP         1         
+    HepB        1
+    Hib         1
+    IPV         1
+    Pent        3
+    Hex         4
+    OPV         1
+    DTP-IPV     2
+    DTP-HepB    2 ;  
+
+end;
